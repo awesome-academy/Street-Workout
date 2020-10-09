@@ -1,0 +1,32 @@
+workspace: true
+
+stages:
+  - build
+
+jobs:
+- name: Build
+  stage: build
+  image: androidsdk/android-29:latest
+  environment:
+    JVM_OPTS: -Xmx3200m
+  cache:
+  - key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+    paths:
+      - ~/.gradle
+  before_script:
+  - echo "Start job"
+  - chmod +x ./gradlew
+  script:
+  - ./gradlew lint test
+  artifacts:
+      paths:
+        - app/build/reports
+        - app/build/test-results
+      expires_in: 3 days
+  after_script:
+  - echo "Finish job"
+  only:
+    branches:
+    - main
+    events:
+    - pull_request
