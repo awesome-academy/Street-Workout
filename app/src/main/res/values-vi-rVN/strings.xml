@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Street Workout</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_dashboard">Dinh dưỡng</string>
+    <string name="title_notifications">Cài đặt</string>
+</resources>
