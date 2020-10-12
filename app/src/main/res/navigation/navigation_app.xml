@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigationHome">
+
+    <fragment
+        android:id="@+id/navigationHome"
+        android:name="com.example.streetworkout.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigationNutrition"
+        android:name="com.example.streetworkout.ui.nutrition.NutritionFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_nutrition" />
+
+    <fragment
+        android:id="@+id/navigationSettings"
+        android:name="com.example.streetworkout.ui.setting.SettingsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
