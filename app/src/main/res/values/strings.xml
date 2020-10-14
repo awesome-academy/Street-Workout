@@ -3,4 +3,14 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Nutrition</string>
     <string name="title_notifications">Settings</string>
+    <string name="title_home_screen">PRACTICE AT HOME</string>
+
+    <string name="text_button_hot">hot</string>
+    <string name="text_time">MINUTE</string>
+    <string name="text_kcal">KCAL</string>
+    <string name="text_training">PRACTICE TIMES</string>
+    <string name="text_challenge">Challenge</string>
+    <string name="text_beginner">Beginner</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_advance">Advance</string>
 </resources>

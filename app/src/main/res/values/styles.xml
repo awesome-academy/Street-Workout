@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -9,5 +9,38 @@
 
     <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="AppTheme.TransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
+
+    <style name="RoundedImageView" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_10</item>
+    </style>
+
+    <style name="TextAppearance.App.Title.Collapsed" parent="android:TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.Title.Expanded" parent="android:TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextTitleCategoryStyle" parent="TextAppearance.App.Title.Collapsed">
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="TextPreviewHistoryTrainingStyle" parent="TextAppearance.App.Title.Expanded">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/dp_10</item>
     </style>
 </resources>
