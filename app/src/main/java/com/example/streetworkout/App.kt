@@ -1,9 +1,7 @@
 package com.example.streetworkout
 
 import android.app.Application
-import com.example.streetworkout.di.apiModule
-import com.example.streetworkout.di.networkModule
-import com.example.streetworkout.di.repoModule
+import com.example.streetworkout.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -13,7 +11,14 @@ class App : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@App)
-            modules(listOf(apiModule, networkModule, repoModule))
+            modules(listOf(
+                apiModule,
+                networkModule,
+                dbModule,
+                repoCategoryModule,
+                repoTrainingModule,
+                repoUserModule)
+            )
         }
     }
 }
