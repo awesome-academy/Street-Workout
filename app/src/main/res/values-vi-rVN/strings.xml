@@ -4,4 +4,14 @@
     <string name="title_home">Trang chủ</string>
     <string name="title_dashboard">Dinh dưỡng</string>
     <string name="title_notifications">Cài đặt</string>
+    <string name="title_home_screen">TẬP LUYỆN TẠI NHÀ</string>
+
+    <string name="text_button_hot">hot</string>
+    <string name="text_time">PHÚT</string>
+    <string name="text_kcal">KCAL</string>
+    <string name="text_training">LẦN TẬP</string>
+    <string name="text_challenge">Thử thách</string>
+    <string name="text_beginner">Người mới bắt đầu</string>
+    <string name="text_normal">Trung bình</string>
+    <string name="text_advance">Nâng cao</string>
 </resources>
