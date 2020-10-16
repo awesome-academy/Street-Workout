@@ -17,7 +17,8 @@ class App : Application() {
                 dbModule,
                 repoCategoryModule,
                 repoTrainingModule,
-                repoUserModule)
+                repoUserModule,
+                viewModelModule)
             )
         }
     }
