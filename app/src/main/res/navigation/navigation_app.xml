@@ -9,7 +9,12 @@
         android:id="@+id/navigationHome"
         android:name="com.example.streetworkout.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/actionToDetailExerciseFragment"
+            app:destination="@id/detailExerciseFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigationNutrition"
@@ -22,5 +27,28 @@
         android:name="com.example.streetworkout.ui.setting.SettingsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/detailExerciseFragment"
+        android:name="com.example.streetworkout.ui.detail.DetailExerciseFragment"
+        tools:layout="@layout/fragment_detail_exercises">
+
+        <argument
+            android:name="bundleNameExercise"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="bundleImageExercise"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="bundleIdExercise"
+            android:defaultValue="1"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>
