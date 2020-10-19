@@ -13,4 +13,6 @@
     <string name="text_beginner">Beginner</string>
     <string name="text_normal">Normal</string>
     <string name="text_advance">Advance</string>
+    <string name="text_button_start_training">Start training</string>
+    <string name="text_button_close">Đóng</string>
 </resources>

@@ -5,7 +5,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.streetworkout.R
 import com.example.streetworkout.base.BaseFragment
 import com.example.streetworkout.data.model.GroupMuscle
-import com.example.streetworkout.ui.detail.DetailExerciseFragment
 import com.example.streetworkout.util.showToast
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -36,10 +35,9 @@ class HomeFragment : BaseFragment() {
         recyclerViewMuscleAdvance.adapter = advanceAdapter
     }
 
-    private fun openDetailExerciseFragment(item: GroupMuscle, position: Int) {
+    private fun openDetailExerciseFragment(item: GroupMuscle, position: Int) = with(item) {
         findNavController().navigate(
-            R.id.actionToDetailExerciseFragment,
-            DetailExerciseFragment.getBundle(item.title, item.image, item.id)
+            HomeFragmentDirections.actionToDetailExerciseFragment(title, image, id)
         )
     }
 

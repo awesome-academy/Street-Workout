@@ -14,4 +14,6 @@
     <string name="text_beginner">Người mới bắt đầu</string>
     <string name="text_normal">Trung bình</string>
     <string name="text_advance">Nâng cao</string>
+    <string name="text_button_start_training">Bắt đầu tập luyện</string>
+    <string name="text_button_close">Đóng</string>
 </resources>
