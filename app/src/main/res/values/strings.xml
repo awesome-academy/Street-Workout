@@ -14,5 +14,7 @@
     <string name="text_normal">Normal</string>
     <string name="text_advance">Advance</string>
     <string name="text_button_start_training">Start training</string>
-    <string name="text_button_close">Đóng</string>
+    <string name="text_button_close">Close</string>
+    <string name="text_total_exercise">Total %d exercise</string>
+    <string name="text_current_page">%d/%d</string>
 </resources>

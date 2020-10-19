@@ -1,8 +1,11 @@
 package com.example.streetworkout.data.model
 
+import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Exercise(
     @SerializedName("id_exercise")
     var idExercise: Int,
@@ -18,7 +21,7 @@ data class Exercise(
     var linkYoutube: String,
     @SerializedName("id")
     var id: Int
-) {
+) : Parcelable {
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<Exercise>() {
             override fun areItemsTheSame(oldItem: Exercise, newItem: Exercise): Boolean {

@@ -16,4 +16,6 @@
     <string name="text_advance">Nâng cao</string>
     <string name="text_button_start_training">Bắt đầu tập luyện</string>
     <string name="text_button_close">Đóng</string>
+    <string name="text_total_exercise">Tổng %d bài tập</string>
+    <string name="text_current_page">%d/%d</string>
 </resources>
