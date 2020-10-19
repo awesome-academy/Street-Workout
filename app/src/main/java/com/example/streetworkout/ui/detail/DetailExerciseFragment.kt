@@ -10,9 +10,4 @@ class DetailExerciseFragment : BaseFragment() {
     override fun initData() {}
 
     override fun initAction() {}
-
-    companion object {
-        fun getBundle(title: String, imageUrl: String, id: Int) =
-            DetailExerciseFragmentArgs(title, imageUrl, id).toBundle()
-    }
 }
