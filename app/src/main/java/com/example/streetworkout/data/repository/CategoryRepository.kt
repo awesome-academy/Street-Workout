@@ -1,6 +1,7 @@
 package com.example.streetworkout.data.repository
 
 import com.example.streetworkout.data.model.Category
+import com.example.streetworkout.data.model.Exercise
 import com.example.streetworkout.data.resource.CategoryDataSource
 import io.reactivex.rxjava3.core.Observable
 
@@ -10,4 +11,6 @@ class CategoryRepository (
 ) : CategoryDataSource.Remote {
 
     override fun getInformationHome(): Observable<Category> = remote.getInformationHome()
+
+    override fun getListExercise(id: Int): Observable<List<Exercise>> = remote.getListExercise(id)
 }

@@ -25,6 +25,7 @@
 
         <ImageView
             android:id="@+id/imageViewPreview"
+            gifImage="@{exercise.image}"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_100"
             android:layout_marginStart="@dimen/dp_20"
@@ -39,6 +40,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_20"
+            android:text="@{exercise.title}"
             app:layout_constraintBottom_toTopOf="@+id/textViewTime"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageViewPreview"
@@ -49,6 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_20"
+            android:text="@{exercise.time}"
             android:textSize="@dimen/sp_18"
             app:layout_constraintBottom_toBottomOf="@id/imageViewPreview"
             app:layout_constraintEnd_toEndOf="parent"

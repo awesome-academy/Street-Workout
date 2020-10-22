@@ -33,6 +33,10 @@
         android:name="com.example.streetworkout.ui.detail.DetailExerciseFragment"
         tools:layout="@layout/fragment_detail_exercises">
 
+        <action
+            android:id="@+id/actionToDialogPreviewExercise"
+            app:destination="@id/dialogPreviewExercise" />
+
         <argument
             android:name="bundleNameExercise"
             android:defaultValue="@null"
@@ -50,5 +54,21 @@
             android:defaultValue="1"
             app:argType="integer" />
     </fragment>
+
+    <dialog
+        android:id="@+id/dialogPreviewExercise"
+        android:name="com.example.streetworkout.ui.dialog.DialogPreviewExercise"
+        android:label="DialogPreviewExercise"
+        tools:layout="@layout/dialog_fragment_preview_exercise">
+
+        <argument
+            android:name="bundleListExercise"
+            app:argType="com.example.streetworkout.data.model.Exercise[]" />
+
+        <argument
+            android:name="bundlePosition"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </dialog>
 
 </navigation>
