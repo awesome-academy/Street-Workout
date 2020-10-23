@@ -18,4 +18,13 @@
     <string name="text_button_close">Đóng</string>
     <string name="text_total_exercise">Tổng %d bài tập</string>
     <string name="text_current_page">%d/%d</string>
+    <string name="text_title_rest_training">Nghỉ ngơi chút xíu đã!</string>
+    <string name="text_rest_time">00:30</string>
+    <string name="text_button_skip">Bỏ qua</string>
+    <string name="text_time_plus">+ 20s</string>
+    <string name="text_next_exercise">Tiếp theo:</string>
+    <string name="text_time_finish">Thời lượng</string>
+    <string name="text_kcal_finish">Kcal</string>
+    <string name="text_exercise_finish">Bài tập</string>
+    <string name="text_title_finish">Tốt lắm, bạn đã làm được!</string>
 </resources>

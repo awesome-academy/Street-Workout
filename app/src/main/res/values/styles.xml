@@ -43,4 +43,9 @@
         <item name="android:gravity">center</item>
         <item name="android:paddingTop">@dimen/dp_10</item>
     </style>
+
+    <style name="TextValueFinishScreenStyle" parent="TextAppearance.App.Title.Expanded">
+        <item name="android:textSize">@dimen/sp_25</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

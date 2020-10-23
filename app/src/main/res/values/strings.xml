@@ -17,4 +17,13 @@
     <string name="text_button_close">Close</string>
     <string name="text_total_exercise">Total %d exercise</string>
     <string name="text_current_page">%d/%d</string>
+    <string name="text_title_rest_training">Rest for a while!</string>
+    <string name="text_rest_time">00:30</string>
+    <string name="text_button_skip">Skip</string>
+    <string name="text_time_plus">+ 20s</string>
+    <string name="text_next_exercise">Next:</string>
+    <string name="text_time_finish">Total time</string>
+    <string name="text_kcal_finish">Kcal</string>
+    <string name="text_exercise_finish">Total exercise</string>
+    <string name="text_title_finish">Good job, you did it!</string>
 </resources>

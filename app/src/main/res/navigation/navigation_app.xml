@@ -37,6 +37,10 @@
             android:id="@+id/actionToDialogPreviewExercise"
             app:destination="@id/dialogPreviewExercise" />
 
+        <action
+            android:id="@+id/actionToTrainingFragment"
+            app:destination="@id/trainingFragment" />
+
         <argument
             android:name="bundleNameExercise"
             android:defaultValue="@null"
@@ -54,6 +58,49 @@
             android:defaultValue="1"
             app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.example.streetworkout.ui.training.TrainingFragment"
+        android:label="TrainingFragment"
+        tools:layout="@layout/fragment_training">
+
+        <action
+            android:id="@+id/actionToRestTimeFragment"
+            app:destination="@id/restTimeFragment" />
+
+        <action
+            android:id="@+id/actionToFinishTrainingFragment"
+            app:destination="@id/finishTrainingFragment" />
+
+        <argument
+            android:name="bundleIdExercise"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="bundleNameExercise"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="bundleTimeStart"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restTimeFragment"
+        android:name="com.example.streetworkout.ui.rest.RestTimeFragment"
+        android:label="RestTimeFragment"
+        tools:layout="@layout/fragment_rest_time" />
+
+    <fragment
+        android:id="@+id/finishTrainingFragment"
+        android:name="com.example.streetworkout.ui.finish.FinishTrainingFragment"
+        android:label="FinishTrainingFragment"
+        tools:layout="@layout/fragment_finish_training"/>
 
     <dialog
         android:id="@+id/dialogPreviewExercise"
