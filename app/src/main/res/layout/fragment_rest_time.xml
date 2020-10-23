@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="exercise"
+            type="com.example.streetworkout.data.model.Exercise" />
+
+        <variable
+            name="viewModel"
+            type="com.example.streetworkout.ui.rest.RestTimeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/text_title_rest_training"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/text_rest_time"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButtonSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:backgroundTint="@android:color/white"
+            android:onClick="@{() -> viewModel.skipRestTimeTraining()}"
+            android:text="@string/text_button_skip"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_20"
+            app:cornerRadius="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/materialButtonPlus"
+            app:layout_constraintTop_toTopOf="@id/materialButtonPlus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButtonPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="@{() -> viewModel.updateRestTime()}"
+            android:text="@string/text_time_plus"
+            android:textSize="@dimen/sp_20"
+            app:cornerRadius="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@+id/materialButtonSkip"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTime" />
+
+        <View
+            android:id="@+id/viewBottom"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_100"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialButtonPlus"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPreview"
+            gifImage="@{exercise.image}"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/viewBottom"
+            app:layout_constraintStart_toStartOf="@id/viewBottom"
+            app:layout_constraintTop_toTopOf="@id/viewBottom" />
+
+        <TextView
+            android:id="@+id/textViewNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/text_next_exercise"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNameExercise"
+            app:layout_constraintStart_toEndOf="@id/imageViewPreview"
+            app:layout_constraintTop_toTopOf="@+id/viewBottom" />
+
+        <TextView
+            android:id="@+id/textViewPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@id/textViewNext"
+            app:layout_constraintTop_toTopOf="@id/textViewNext" />
+
+        <TextView
+            android:id="@+id/textViewNameExercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.title}"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintBottom_toTopOf="@+id/textViewRep"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewNext"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNext" />
+
+        <TextView
+            android:id="@+id/textViewRep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.time}"
+            app:layout_constraintBottom_toBottomOf="@+id/viewBottom"
+            app:layout_constraintStart_toStartOf="@id/textViewNext"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNameExercise" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

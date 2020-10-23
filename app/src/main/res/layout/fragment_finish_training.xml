@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/imageViewCupChampion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:srcCompat="@drawable/winner" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/TextValueFinishScreenStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_title_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewCupChampion" />
+
+    <TextView
+        android:id="@+id/textViewTotalExercise"
+        style="@style/TextValueFinishScreenStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintBottom_toTopOf="@+id/textViewExercise"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTotalKcal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewTotalKcal"
+        style="@style/TextValueFinishScreenStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTotalTime"
+        app:layout_constraintStart_toEndOf="@+id/textViewTotalExercise"
+        app:layout_constraintTop_toTopOf="@+id/textViewTotalExercise" />
+
+    <TextView
+        android:id="@+id/textViewTotalTime"
+        style="@style/TextValueFinishScreenStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewTotalKcal"
+        app:layout_constraintTop_toTopOf="@+id/textViewTotalKcal" />
+
+    <TextView
+        android:id="@+id/textViewExercise"
+        style="@style/TextAppearance.App.Title.Expanded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/text_exercise_finish"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalExercise"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalExercise"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalExercise" />
+
+    <TextView
+        android:id="@+id/textViewKcal"
+        style="@style/TextAppearance.App.Title.Expanded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_kcal_finish"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalKcal"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalKcal"
+        app:layout_constraintTop_toTopOf="@+id/textViewExercise" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        style="@style/TextAppearance.App.Title.Expanded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_time_finish"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalTime"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalTime"
+        app:layout_constraintTop_toTopOf="@+id/textViewKcal" />
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_white_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

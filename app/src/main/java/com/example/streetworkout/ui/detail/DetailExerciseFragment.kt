@@ -32,11 +32,23 @@ class DetailExerciseFragment : BaseFragment() {
         observeData()
     }
 
-    override fun initAction() {}
+    override fun initAction() {
+        buttonStartTraining.setOnClickListener { startTraining() }
+    }
 
     private fun initAdapter() {
         recyclerViewExercise.adapter = adapterExercise
         itemTouchHelper.attachToRecyclerView(recyclerViewExercise)
+    }
+
+    private fun startTraining() {
+        findNavController().navigate(
+            DetailExerciseFragmentDirections.actionToTrainingFragment(
+                navArgs.bundleIdExercise,
+                navArgs.bundleNameExercise,
+                System.currentTimeMillis()
+            )
+        )
     }
 
     private fun openDialogPreview(exercise: Exercise, position: Int) {
