@@ -100,7 +100,13 @@
         android:id="@+id/finishTrainingFragment"
         android:name="com.example.streetworkout.ui.finish.FinishTrainingFragment"
         android:label="FinishTrainingFragment"
-        tools:layout="@layout/fragment_finish_training"/>
+        tools:layout="@layout/fragment_finish_training">
+
+        <argument
+            android:name="bundleTotalTime"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
 
     <dialog
         android:id="@+id/dialogPreviewExercise"
