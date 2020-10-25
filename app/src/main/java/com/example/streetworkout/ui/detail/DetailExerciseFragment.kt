@@ -1,5 +1,6 @@
 package com.example.streetworkout.ui.detail
 
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import com.example.streetworkout.R
 import com.example.streetworkout.base.BaseFragment
 import com.example.streetworkout.data.model.Exercise
+import com.example.streetworkout.ui.training.ShareTrainingViewModel
 import com.example.streetworkout.util.loadImage
 import com.example.streetworkout.util.showToast
 import kotlinx.android.synthetic.main.fragment_detail_exercises.*
@@ -16,6 +18,7 @@ class DetailExerciseFragment : BaseFragment() {
 
     private val navArgs by navArgs<DetailExerciseFragmentArgs>()
     private val viewModel by viewModel<DetailExerciseViewModel>()
+    private val shareViewModel by activityViewModels<ShareTrainingViewModel>()
     private val adapterExercise = DetailExerciseAdapter(::openDialogPreview, ::onImageTouch)
     private val callback: ItemTouchHelper.Callback = DetailExerciseItemTouch(::onMove)
     private val itemTouchHelper = ItemTouchHelper(callback)
@@ -42,6 +45,8 @@ class DetailExerciseFragment : BaseFragment() {
     }
 
     private fun startTraining() {
+        shareViewModel.setExercises(adapterExercise.currentList)
+        shareViewModel.setPosition(0)
         findNavController().navigate(
             DetailExerciseFragmentDirections.actionToTrainingFragment(
                 navArgs.bundleIdExercise,
