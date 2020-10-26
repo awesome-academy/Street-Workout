@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="training"
+            type="com.example.streetworkout.data.resource.entity.Training" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewPreview"
+            loadDrawable="@{training.image}"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_margin="@dimen/dp_10"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:text="@{training.date}"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTitle"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPreview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{training.name}"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTotalTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+        <ImageView
+            android:id="@+id/imageViewTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTotalTime"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTotalTime"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@id/textViewDate"
+            app:layout_constraintTop_toTopOf="@+id/textViewTotalTime"
+            app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+        <ImageView
+            android:id="@+id/imageViewTotalKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTotalTime"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTotalKcal"
+            app:layout_constraintStart_toEndOf="@+id/textViewTotalTime"
+            app:layout_constraintTop_toTopOf="@+id/textViewTotalTime"
+            app:srcCompat="@drawable/ic_baseline_whatshot_24" />
+
+        <TextView
+            android:id="@+id/textViewTotalTime"
+            formatTime="@{training.totalTime}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewTotalKcal"
+            app:layout_constraintStart_toEndOf="@+id/imageViewTotalTime"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+        <TextView
+            android:id="@+id/textViewTotalKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:text="@{``+ training.totalKcal}"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTotalTime"
+            app:layout_constraintEnd_toStartOf="@id/textViewKcal"
+            app:layout_constraintStart_toEndOf="@+id/imageViewTotalKcal"
+            app:layout_constraintTop_toTopOf="@+id/textViewTotalTime" />
+
+        <TextView
+            android:id="@+id/textViewKcal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:text="@string/text_kcal_finish"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTotalTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTotalKcal"
+            app:layout_constraintTop_toTopOf="@+id/textViewTotalTime" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0_1"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

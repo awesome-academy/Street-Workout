@@ -14,6 +14,6 @@ val viewModelModule = module {
     viewModel { DetailExerciseViewModel(get()) }
     viewModel { DialogPreviewExerciseViewModel() }
     viewModel { ShareTrainingViewModel() }
-    viewModel { TrainingViewModel(get()) }
+    viewModel { TrainingViewModel(get(), get()) }
     viewModel { RestTimeViewModel() }
 }

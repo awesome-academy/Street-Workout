@@ -14,3 +14,7 @@ object TimeConst {
     const val FORMAT_CURRENT_DATE = "EEE, dd'Th'MM, HH:mm"
     const val FORMAT_TIME_EXERCISE = "mm:ss"
 }
+
+object PatternConst {
+    const val PATTERN_DOUBLE = "#.#"
+}

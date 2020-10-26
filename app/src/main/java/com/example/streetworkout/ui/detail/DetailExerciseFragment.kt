@@ -51,6 +51,8 @@ class DetailExerciseFragment : BaseFragment() {
             DetailExerciseFragmentDirections.actionToTrainingFragment(
                 navArgs.bundleIdExercise,
                 navArgs.bundleNameExercise,
+                navArgs.bundleImageExercise,
+                navArgs.bundleLevelTraining,
                 System.currentTimeMillis()
             )
         )

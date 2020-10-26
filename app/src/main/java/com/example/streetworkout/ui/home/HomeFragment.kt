@@ -37,7 +37,7 @@ class HomeFragment : BaseFragment() {
 
     private fun openDetailExerciseFragment(item: GroupMuscle, position: Int) = with(item) {
         findNavController().navigate(
-            HomeFragmentDirections.actionToDetailExerciseFragment(title, image, id)
+            HomeFragmentDirections.actionToDetailExerciseFragment(title, image, id, levelTraining.toFloat())
         )
     }
 

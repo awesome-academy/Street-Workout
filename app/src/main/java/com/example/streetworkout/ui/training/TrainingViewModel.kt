@@ -5,19 +5,26 @@ import androidx.lifecycle.MutableLiveData
 import com.example.streetworkout.base.RxViewModel
 import com.example.streetworkout.data.model.Exercise
 import com.example.streetworkout.data.repository.TrainingHistoryRepository
+import com.example.streetworkout.data.repository.UserRepository
 import com.example.streetworkout.data.resource.entity.Training
+import com.example.streetworkout.util.PatternConst.PATTERN_DOUBLE
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.kotlin.addTo
 import io.reactivex.rxjava3.schedulers.Schedulers
+import java.text.DecimalFormat
 import java.util.concurrent.TimeUnit
 
-class TrainingViewModel(private val trainingRepository: TrainingHistoryRepository) : RxViewModel() {
+class TrainingViewModel(
+    private val trainingRepository: TrainingHistoryRepository,
+    private val userRepository: UserRepository
+) : RxViewModel() {
 
     private val exercises = mutableListOf<Exercise>()
     private var position = 0
     private var timeExercise = 0L
     private var timeTraining = 0L
+    private var weightUser = 0
 
     private val _totalTimeTraining = MutableLiveData<Int>()
     val totalTimeTraining: LiveData<Int>
@@ -34,6 +41,10 @@ class TrainingViewModel(private val trainingRepository: TrainingHistoryRepositor
     private val _isExistExercise = MutableLiveData<Boolean>()
     val isExistExercise: LiveData<Boolean>
         get() = _isExistExercise
+
+    private val _totalKcalTraining = MutableLiveData<Double>()
+    val totalKcalTraining: LiveData<Double>
+        get() = _totalKcalTraining
 
     private val _error = MutableLiveData<String>()
     val error: LiveData<String>
@@ -87,9 +98,21 @@ class TrainingViewModel(private val trainingRepository: TrainingHistoryRepositor
         disposables.clear()
     }
 
-    fun finishTraining() {
+    fun finishTraining(level: Double) {
+        calculatorKcal(level)
         _totalTimeTraining.value = timeTraining.toInt()
         _totalTimeTraining.value = null
+    }
+
+    fun getWeightUser() {
+        userRepository.getInformationUser()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                weightUser = it.weight
+            }, {
+                _error.value = it.message.toString()
+            })
     }
 
     fun addHistoryTraining(training: Training) {
@@ -100,5 +123,13 @@ class TrainingViewModel(private val trainingRepository: TrainingHistoryRepositor
             }, {
                 _error.postValue(it.message.toString())
             })
+    }
+
+    private fun calculatorKcal(level: Double) {
+        val recipe =
+            timeTraining.div(60).times(3.5).times(level).times(weightUser)
+        val totalKcal = recipe.div(1000).times(5)
+        _totalKcalTraining.value =
+            DecimalFormat(PATTERN_DOUBLE).format(totalKcal).replace(",", ".").toDouble()
     }
 }

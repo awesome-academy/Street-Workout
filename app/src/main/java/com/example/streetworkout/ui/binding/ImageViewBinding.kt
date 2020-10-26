@@ -24,3 +24,8 @@ fun updateImage(imageView: ImageView, level: Int) {
 fun loadGifImage(imageView: ImageView, url: String) {
     imageView.loadGifImage(url)
 }
+
+@BindingAdapter("loadDrawable")
+fun loadDrawable(imageView: ImageView, int: Int) {
+    imageView.setImageResource(int)
+}

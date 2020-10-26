@@ -11,7 +11,9 @@ data class GroupMuscle(
     @SerializedName("image")
     val image: String,
     @SerializedName("level")
-    val level: Int
+    val level: Int,
+    @SerializedName("level_activity")
+    var levelTraining: Double
 ) {
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<GroupMuscle>() {

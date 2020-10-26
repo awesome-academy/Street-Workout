@@ -57,6 +57,11 @@
             android:name="bundleIdExercise"
             android:defaultValue="1"
             app:argType="integer" />
+
+        <argument
+            android:name="bundleLevelTraining"
+            android:defaultValue="0"
+            app:argType="float" />
     </fragment>
 
     <fragment
@@ -85,6 +90,17 @@
             app:nullable="true" />
 
         <argument
+            android:name="bundleImageExercise"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="bundleLevelTraining"
+            android:defaultValue="0"
+            app:argType="float" />
+
+        <argument
             android:name="bundleTimeStart"
             android:defaultValue="0L"
             app:argType="long" />
@@ -106,6 +122,11 @@
             android:name="bundleTotalTime"
             android:defaultValue="0"
             app:argType="integer" />
+
+        <argument
+            android:name="bundleTotalKcal"
+            android:defaultValue="0"
+            app:argType="float" />
     </fragment>
 
     <dialog

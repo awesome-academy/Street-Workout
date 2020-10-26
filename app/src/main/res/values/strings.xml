@@ -4,6 +4,7 @@
     <string name="title_dashboard">Nutrition</string>
     <string name="title_notifications">Settings</string>
     <string name="title_home_screen">PRACTICE AT HOME</string>
+    <string name="title_training_history">HISTORY TRAINING</string>
 
     <string name="text_button_hot">hot</string>
     <string name="text_time">MINUTE</string>
