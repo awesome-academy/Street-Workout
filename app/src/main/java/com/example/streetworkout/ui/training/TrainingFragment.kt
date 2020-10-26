@@ -25,6 +25,7 @@ class TrainingFragment : BaseFragment() {
     private val trainingViewModel by viewModel<TrainingViewModel>()
     private var binding: FragmentTrainingBinding? = null
     private var isStreamExist = false
+    private var totalKcal = 0.0
 
     override val layoutResources: Int
         get() = R.layout.fragment_training
@@ -40,6 +41,7 @@ class TrainingFragment : BaseFragment() {
             if (!isStreamExist) trainingViewModel.startTimeTraining(0)
         })
         shareViewModel.position.observe(viewLifecycleOwner, Observer(trainingViewModel::setPosition))
+        trainingViewModel.getWeightUser()
         observeData()
     }
 
@@ -75,7 +77,7 @@ class TrainingFragment : BaseFragment() {
                     findNavController().navigate(R.id.actionToRestTimeFragment)
                     isStreamExist = true
                 } else {
-                    trainingViewModel.finishTraining()
+                    trainingViewModel.finishTraining(argsNav.bundleLevelTraining.toDouble())
                 }
             }
         })
@@ -87,11 +89,19 @@ class TrainingFragment : BaseFragment() {
                     argsNav.bundleNameExercise.toString(),
                     getMuscleGroupImage(),
                     it,
-                    0,
-                    SimpleDateFormat(FORMAT_CURRENT_DATE, Locale.getDefault()).format(argsNav.bundleTimeStart))
+                    totalKcal,
+                    SimpleDateFormat(FORMAT_CURRENT_DATE, Locale.getDefault()).format(argsNav.bundleTimeStart),
+                    argsNav.bundleImageExercise.toString(),
+                    argsNav.bundleIdExercise,
+                    argsNav.bundleLevelTraining.toDouble())
                 )
-                findNavController().navigate(TrainingFragmentDirections.actionToFinishTrainingFragment(it))
+                findNavController().navigate(
+                    TrainingFragmentDirections.actionToFinishTrainingFragment(it, totalKcal.toFloat()))
             }
+        })
+
+        totalKcalTraining.observe(viewLifecycleOwner, Observer {
+            totalKcal = it
         })
 
         countDownTimeExercise.observe(viewLifecycleOwner, Observer {

@@ -23,6 +23,7 @@ class FinishTrainingFragment : BaseFragment() {
             textViewTotalExercise.text = it.size.toString()
             textViewTotalTime.text =
                 SimpleDateFormat(FORMAT_TIME_EXERCISE, Locale.getDefault()).format(navArgs.bundleTotalTime * 1000)
+            textViewKcal.text = navArgs.bundleTotalKcal.toString()
         })
     }
 

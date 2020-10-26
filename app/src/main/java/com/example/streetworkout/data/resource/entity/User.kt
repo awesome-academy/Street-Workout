@@ -9,5 +9,6 @@ data class User(
     val sex: Int,
     val age: Int,
     val weight: Int,
-    val height: Int
+    val height: Int,
+    val bmi: Double
 )
