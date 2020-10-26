@@ -46,10 +46,6 @@ class TrainingViewModel(
     val totalKcalTraining: LiveData<Double>
         get() = _totalKcalTraining
 
-    private val _error = MutableLiveData<String>()
-    val error: LiveData<String>
-        get() = _error
-
     fun setListExercise(exercises: List<Exercise>) {
         if (this.exercises.isEmpty()) this.exercises.addAll(exercises)
     }
@@ -71,7 +67,8 @@ class TrainingViewModel(
                 timeTraining = it
             }, {
                 _error.postValue(it.message.toString())
-            }).addTo(disposables)
+            })
+            .addTo(disposables)
     }
 
     fun countDownTimerExercise(long: Long) {
@@ -86,7 +83,8 @@ class TrainingViewModel(
                 _error.postValue(it.message.toString())
             }, {
                 openFragment()
-            }).addTo(disposables)
+            })
+            .addTo(disposables)
     }
 
     fun resumeStream() {
@@ -113,6 +111,7 @@ class TrainingViewModel(
             }, {
                 _error.value = it.message.toString()
             })
+            .addTo(disposables)
     }
 
     fun addHistoryTraining(training: Training) {
@@ -123,13 +122,21 @@ class TrainingViewModel(
             }, {
                 _error.postValue(it.message.toString())
             })
+            .addTo(disposables)
     }
 
     private fun calculatorKcal(level: Double) {
         val recipe =
-            timeTraining.div(60).times(3.5).times(level).times(weightUser)
-        val totalKcal = recipe.div(1000).times(5)
+            timeTraining.toDouble().div(SIXTY).times(THREE_POINT_FIVE).times(level).times(weightUser)
+        val totalKcal = recipe.div(ONE_THOUSAND).times(FIVE)
         _totalKcalTraining.value =
             DecimalFormat(PATTERN_DOUBLE).format(totalKcal).replace(",", ".").toDouble()
+    }
+
+    companion object {
+        private const val FIVE = 5
+        private const val SIXTY = 60
+        private const val ONE_THOUSAND = 1000
+        private const val THREE_POINT_FIVE = 3.5
     }
 }

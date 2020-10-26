@@ -14,6 +14,10 @@
         <action
             android:id="@+id/actionToDetailExerciseFragment"
             app:destination="@id/detailExerciseFragment" />
+
+        <action
+            android:id="@+id/actionToTrainingHistoryFragment"
+            app:destination="@id/trainingHistoryFragment" />
     </fragment>
 
     <fragment
@@ -60,7 +64,6 @@
 
         <argument
             android:name="bundleLevelTraining"
-            android:defaultValue="0"
             app:argType="float" />
     </fragment>
 
@@ -97,7 +100,6 @@
 
         <argument
             android:name="bundleLevelTraining"
-            android:defaultValue="0"
             app:argType="float" />
 
         <argument
@@ -125,8 +127,18 @@
 
         <argument
             android:name="bundleTotalKcal"
-            android:defaultValue="0"
             app:argType="float" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trainingHistoryFragment"
+        android:name="com.example.streetworkout.ui.history.TrainingHistoryFragment"
+        android:label="TrainingHistoryFragment"
+        tools:layout="@layout/fragment_history_training">
+
+        <action
+            android:id="@+id/actionToDetailExerciseFragment"
+            app:destination="@id/detailExerciseFragment" />
     </fragment>
 
     <dialog

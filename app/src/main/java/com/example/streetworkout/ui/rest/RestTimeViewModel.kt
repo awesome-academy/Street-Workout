@@ -35,10 +35,6 @@ class RestTimeViewModel : RxViewModel() {
     val currentPosition: LiveData<Int>
         get() = _currentPosition
 
-    private val _error = MutableLiveData<String>()
-    val error: LiveData<String>
-        get() = _error
-
     fun setListExercise(exercises: List<Exercise>) {
         this.exercises.addAll(exercises)
     }
@@ -62,7 +58,8 @@ class RestTimeViewModel : RxViewModel() {
                 _error.postValue(it.message.toString())
             }, {
                 _isRunComplete.postValue(true)
-            }).addTo(disposables)
+            })
+            .addTo(disposables)
     }
 
     fun skipRestTimeTraining() {

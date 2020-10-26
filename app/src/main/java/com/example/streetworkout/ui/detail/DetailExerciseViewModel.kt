@@ -16,10 +16,6 @@ class DetailExerciseViewModel(private val repository: CategoryRepository) : RxVi
     val exercise: LiveData<List<Exercise>>
         get() = _exercises
 
-    private val _error = MutableLiveData<String>()
-    val error: LiveData<String>
-        get() = _error
-
     fun getListExercise(id: Int) {
         repository.getListExercise(id)
             .subscribe({
