@@ -1,4 +1,4 @@
-package com.example.streetworkout.ui.dialog
+package com.example.streetworkout.ui.dialog.exercise
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

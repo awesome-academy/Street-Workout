@@ -1,4 +1,4 @@
-package com.example.streetworkout.ui.dialog
+package com.example.streetworkout.ui.dialog.exercise
 
 import android.os.Bundle
 import android.view.Gravity

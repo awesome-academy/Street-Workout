@@ -9,11 +9,11 @@
 
         <variable
             name="dialog"
-            type="com.example.streetworkout.ui.dialog.DialogPreviewExercise" />
+            type="com.example.streetworkout.ui.dialog.exercise.DialogPreviewExercise" />
 
         <variable
             name="viewModel"
-            type="com.example.streetworkout.ui.dialog.DialogPreviewExerciseViewModel" />
+            type="com.example.streetworkout.ui.dialog.exercise.DialogPreviewExerciseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
