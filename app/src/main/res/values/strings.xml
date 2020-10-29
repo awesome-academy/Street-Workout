@@ -5,6 +5,7 @@
     <string name="title_notifications">Settings</string>
     <string name="title_home_screen">PRACTICE AT HOME</string>
     <string name="title_training_history">HISTORY TRAINING</string>
+    <string name="title_user_information_screen">Let us know</string>
 
     <string name="text_button_hot">hot</string>
     <string name="text_time">MINUTE</string>
@@ -27,4 +28,38 @@
     <string name="text_kcal_finish">Kcal</string>
     <string name="text_exercise_finish">Total exercise</string>
     <string name="text_title_finish">Good job, you did it!</string>
+    <string name="text_button_update">Update</string>
+    <string name="text_unit_of_height">cm</string>
+    <string name="text_unit_of_weight">kg</string>
+    <string name="text_title_bmi_dialog">BMI (Body Mass Index)</string>
+    <string name="text_content_bmi_dialog">The index is calculated based on the ratio of weight to height squared, indicating your current weight status. Compared with standard BMI values, the individual BMI determines whether a person is overweight, underweight or normal weight.</string>
+    <string name="text_title_sex">Sex</string>
+    <string name="text_title_your_information">Your information</string>
+    <string name="text_title_update_information">Update your information</string>
+    <string name="text_title_age">Age</string>
+    <string name="text_title_weight">Weight</string>
+    <string name="text_title_height">Height</string>
+    <string name="text_title_bmi">BMI index</string>
+    <string name="text_title_settings">Settings</string>
+    <string name="text_title_notification_training">Set a schedule to remind you</string>
+    <string name="text_title_reset_training">Restart the training process</string>
+    <string name="text_radio_button_male">Male</string>
+    <string name="text_radio_button_female">Female</string>
+    <string name="text_bmi_under_weight_index">Smaller 18,5</string>
+    <string name="text_bmi_normal_index">18,5 – 24,9</string>
+    <string name="text_bmi_over_weight_index">25 – 29,9</string>
+    <string name="text_bmi_obese_index">30 – 34,9</string>
+    <string name="text_bmi_extremely_obese_index">Bigger 35</string>
+    <string name="text_bmi_under_weight">Under Weight</string>
+    <string name="text_bmi_normal">Normal</string>
+    <string name="text_bmi_over_weight">Over Weight</string>
+    <string name="text_bmi_obese">Obese</string>
+    <string name="text_bmi_extremely_obese">Extremely Obese</string>
+
+    <string name="hint_edit_text_your_height">Your height</string>
+    <string name="hint_edit_text_your_weight">Your weight</string>
+    <string name="hint_edit_text_your_age">Your age</string>
+    <string name="hint_edit_text_add_height">Enter your height</string>
+    <string name="hint_edit_text_add_weight">Enter your weight</string>
+    <string name="hint_edit_text_add_age">Enter your age</string>
 </resources>

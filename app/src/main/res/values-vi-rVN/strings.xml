@@ -6,6 +6,7 @@
     <string name="title_notifications">Cài đặt</string>
     <string name="title_home_screen">TẬP LUYỆN TẠI NHÀ</string>
     <string name="title_training_history">LỊCH SỬ TẬP LUYỆN</string>
+    <string name="title_user_information_screen">Hãy cho chúng tôi biết</string>
 
     <string name="text_button_hot">hot</string>
     <string name="text_time">PHÚT</string>
@@ -28,4 +29,38 @@
     <string name="text_kcal_finish">Kcal</string>
     <string name="text_exercise_finish">Bài tập</string>
     <string name="text_title_finish">Tốt lắm, bạn đã làm được!</string>
+    <string name="text_button_update">Cập nhật</string>
+    <string name="text_unit_of_height">cm</string>
+    <string name="text_unit_of_weight">kg</string>
+    <string name="text_title_bmi_dialog">BMI (Body Mass Index)</string>
+    <string name="text_content_bmi_dialog">Là chỉ số được tính dựa trên tỉ lệ giữa cân nặng và chiều cao bình phương, nói lên tình trạng cân nặng hiện tại của bạn. So với giá trị BMI tiêu chuẩn, chỉ số BMI cá nhân sẽ xác định một người đang thừa cân, thiếu cân hay có cân nặng cân đối.</string>
+    <string name="text_title_sex">Giới tính</string>
+    <string name="text_title_your_information">Thông tin về bạn</string>
+    <string name="text_title_update_information">Cập nhật thông tin</string>
+    <string name="text_title_age">Tuổi</string>
+    <string name="text_title_weight">Cân nặng</string>
+    <string name="text_title_height">Chiều cao</string>
+    <string name="text_title_bmi">Chỉ số BMI</string>
+    <string name="text_title_settings">Cài đặt</string>
+    <string name="text_title_notification_training">Đặt lịch nhắc nhở bạn</string>
+    <string name="text_title_reset_training">Khởi động lại quá trình luyện tập</string>
+    <string name="text_radio_button_male">Nam</string>
+    <string name="text_radio_button_female">Nữ</string>
+    <string name="text_bmi_under_weight_index">Nhỏ hơn 18,5</string>
+    <string name="text_bmi_normal_index">18,5 – 24,9</string>
+    <string name="text_bmi_over_weight_index">25 – 29,9</string>
+    <string name="text_bmi_obese_index">30 – 34,9</string>
+    <string name="text_bmi_extremely_obese_index">Lớn hơn 35</string>
+    <string name="text_bmi_under_weight">Gầy</string>
+    <string name="text_bmi_normal">Bình thường</string>
+    <string name="text_bmi_over_weight">Thừa cân</string>
+    <string name="text_bmi_obese">Béo phì</string>
+    <string name="text_bmi_extremely_obese">Cực béo phì</string>
+
+    <string name="hint_edit_text_your_height">Chiều cao của bạn</string>
+    <string name="hint_edit_text_your_weight">Cân nặng của bạn</string>
+    <string name="hint_edit_text_your_age">Tuổi của bạn</string>
+    <string name="hint_edit_text_add_height">Nhập chiều cao của bạn</string>
+    <string name="hint_edit_text_add_weight">Nhập cân nặng của bạn</string>
+    <string name="hint_edit_text_add_age">Nhập tuổi của bạn</string>
 </resources>

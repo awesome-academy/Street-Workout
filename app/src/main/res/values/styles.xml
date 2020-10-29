@@ -48,4 +48,10 @@
         <item name="android:textSize">@dimen/sp_25</item>
         <item name="android:gravity">center</item>
     </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="hintTextColor">@android:color/white</item>
+    </style>
 </resources>

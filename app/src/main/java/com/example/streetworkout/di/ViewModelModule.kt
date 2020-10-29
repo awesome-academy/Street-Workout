@@ -2,7 +2,7 @@ package com.example.streetworkout.di
 
 import com.example.streetworkout.ui.training.ShareTrainingViewModel
 import com.example.streetworkout.ui.detail.DetailExerciseViewModel
-import com.example.streetworkout.ui.dialog.DialogPreviewExerciseViewModel
+import com.example.streetworkout.ui.dialog.exercise.DialogPreviewExerciseViewModel
 import com.example.streetworkout.ui.history.TrainingHistoryViewModel
 import com.example.streetworkout.ui.home.HomeViewModel
 import com.example.streetworkout.ui.rest.RestTimeViewModel
