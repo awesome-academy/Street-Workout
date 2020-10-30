@@ -55,6 +55,8 @@
     <string name="text_bmi_over_weight">Over Weight</string>
     <string name="text_bmi_obese">Obese</string>
     <string name="text_bmi_extremely_obese">Extremely Obese</string>
+    <string name="text_user_weight_information">%d KG</string>
+    <string name="text_user_height_information">%D CM</string>
 
     <string name="hint_edit_text_your_height">Your height</string>
     <string name="hint_edit_text_your_weight">Your weight</string>
@@ -62,4 +64,17 @@
     <string name="hint_edit_text_add_height">Enter your height</string>
     <string name="hint_edit_text_add_weight">Enter your weight</string>
     <string name="hint_edit_text_add_age">Enter your age</string>
+
+    <string name="error_invalid_age">Invalid age</string>
+    <string name="error_invalid_weight">Invalid weight</string>
+    <string name="error_invalid_height">Invalid height</string>
+    <string name="error_edit_text_empty">You have not entered a value</string>
+
+    <string name="msg_bmi_under_weight">You are a bit thin</string>
+    <string name="msg_bmi_normal">You are very balanced</string>
+    <string name="msg_bmi_over_weight">You are overweight</string>
+    <string name="msg_bmi_obese">You are a bit obese</string>
+    <string name="msg_bmi_extremely_obese">You are very obese</string>
+    <string name="msg_update_user_information_success">Update information success!</string>
+    <string name="msg_reset_history_success">Reset training history success!</string>
 </resources>

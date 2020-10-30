@@ -56,6 +56,8 @@
     <string name="text_bmi_over_weight">Thừa cân</string>
     <string name="text_bmi_obese">Béo phì</string>
     <string name="text_bmi_extremely_obese">Cực béo phì</string>
+    <string name="text_user_weight_information">%d KG</string>
+    <string name="text_user_height_information">%d CM</string>
 
     <string name="hint_edit_text_your_height">Chiều cao của bạn</string>
     <string name="hint_edit_text_your_weight">Cân nặng của bạn</string>
@@ -63,4 +65,17 @@
     <string name="hint_edit_text_add_height">Nhập chiều cao của bạn</string>
     <string name="hint_edit_text_add_weight">Nhập cân nặng của bạn</string>
     <string name="hint_edit_text_add_age">Nhập tuổi của bạn</string>
+
+    <string name="error_invalid_age">Tuổi không hợp lệ</string>
+    <string name="error_invalid_weight">Cân nặng không hợp lệ</string>
+    <string name="error_invalid_height">Chiều cao không hợp lệ</string>
+    <string name="error_edit_text_empty">Bạn chưa nhập giá trị</string>
+
+    <string name="msg_bmi_under_weight">Bạn hơi gầy</string>
+    <string name="msg_bmi_normal">Bạn rất cân đối</string>
+    <string name="msg_bmi_over_weight">Bạn đang thừa cân</string>
+    <string name="msg_bmi_obese">Bạn hơi béo phì</string>
+    <string name="msg_bmi_extremely_obese">Bạn đang rất béo phì</string>
+    <string name="msg_update_user_information_success">Cập nhật thông tin thành công!</string>
+    <string name="msg_reset_history_success">Reset lịch sử thành công!</string>
 </resources>
