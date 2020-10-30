@@ -47,6 +47,12 @@
         <action
             android:id="@+id/actionToDialogUserInformation"
             app:destination="@id/dialogUserInformation" />
+
+        <action
+            android:id="@+id/actionToNavigationHome"
+            app:destination="@id/navigationHome"
+            app:popUpTo="@id/navigationHome"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
